@@ -30,8 +30,9 @@ def gemini_call(system_prompt):
 
     # print(json.dumps(response_json, indent=4))
 
-    return response_json
+    output_text = "".join(p["text"] for p in response_json["candidates"][0]["content"]["parts"])
 
+    return output_text
 def read_file_content(filepath):
     with open(filepath, 'r') as file:
         return file.read()
@@ -72,11 +73,6 @@ def format_response(exracted_info, cdes, model_obvs):
     with open(model_obvs, 'r') as file:
         model_obvs_content = file.read()
 
-    print("Common Data Elements (CDEs):")
-    print(json.dumps(json.loads(cdes_content), indent=4))
-    print("\nModel Observations:")
-    print(json.dumps(json.loads(model_obvs_content), indent=4))
-
     system_prompt = '''
         You are a medical professional assigned the task of formatting the extracted information from previous patient reports based 
         off structure of a model report. As well as this, you will be provided with a list of Common Data Elements (CDEs) and model 
@@ -85,6 +81,8 @@ def format_response(exracted_info, cdes, model_obvs):
 
     ground_rules = '''Ground rules: 
         - The output should be a FHIR observation resource in JSON format. \n
+        - Do not include any extraneous information or comments. \n
+        - The output should be a valid JSON object. \n
     '''
 
     extracted_info_prompt = f"Here is the extracted information:\n{extracted_info}\n\n"
@@ -97,8 +95,28 @@ def format_response(exracted_info, cdes, model_obvs):
 
 
 if __name__ == "__main__":
-    extracted_info = extract_related("documents/patient_current.json", "documents/rad_reports.txt", "documents/patient_history.json")
-    formatted_response = format_response(extracted_info, "documents/MR_Knee_CDEs_Formatted.json", "documents/Observation_Knee_PCL_Injury.json")
-    print(json.dumps(formatted_response, indent=4))
- 
+    extracted_info = extract_related("model/documents/patient_current.json", 
+                                     "model/documents/rad_reports.txt", 
+                                     "model/documents/patient_history.json"
+                    )
+    formatted_response = format_response(extracted_info, 
+                                         "model/documents/MR_Knee_CDEs_Formatted_Filled.json", 
+                                         "model/documents/Observation_Knee_PCL_Injury.json"
+                        )
+    
+
+    lines = formatted_response.splitlines()
+    if lines[0].startswith("```"):
+        lines = lines[1:]
+    if lines[-1].startswith("```"):
+        lines = lines[:-1]
+
+    # 3) Reassemble just the JSON block
+    json_text = "\n".join(lines)
+
+    # 4) Parse into a Python dict
+    data = json.loads(json_text)
+
+    # 5) Pretty-print with real indentation and line breaks
+    print(json.dumps(data, indent=4))
     
