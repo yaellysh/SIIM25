@@ -1,0 +1,304 @@
+{
+    "resourceType": "Observation",
+    "id": "MRKneeJointObservation",
+    "code": {
+        "coding": [
+            {
+                "system": "https://radelement.org",
+                "code": "RDES2025",
+                "display": "MR Knee Joint"
+            }
+        ]
+    },
+    "status": "preliminary",
+    "subject": {
+        "reference": "Patient/examplePatient"
+    },
+    "derivedFrom": [
+        {
+            "reference": "ImagingStudy/exampleImagingStudy"
+        }
+    ],
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-96B300F9",
+                        "display": "ACL Injury",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-955A424C",
+                        "display": "PCL Injury",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-24FEC7EF",
+                        "display": "MCL Injury",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-BC7B6B00",
+                        "display": "LCL Injury",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-BCCEAA8B",
+                        "display": "MPFL Injury",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-99C69ACD",
+                        "display": "Lateral Menisuc Injury",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-D731C787",
+                        "display": "Medial Menisuc Injury",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-A89BBBC4",
+                        "display": "Medial Meniscal Extrusion",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-4DE215BB",
+                        "display": "Effusion",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-524CDB97",
+                        "display": "Osteoarthiritis (generic)",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-C858DB74",
+                        "display": "Medial Compartment Osteoarthritis",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-16510D1B",
+                        "display": "Lateral Compartment Osteoarthritis",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-F4ECB154",
+                        "display": "PF Compartment Osteoarthritis",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "code": "RDE-0DEE27BC",
+                        "display": "Baker (Popliteal Cyst)",
+                        "system": "https://radelement.org"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "26036001",
+                        "display": "Finding absent",
+                        "system": "http://snomed.info/sct"
+                    }
+                ]
+            }
+        }
+    ]
+}
