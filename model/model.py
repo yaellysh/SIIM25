@@ -101,7 +101,7 @@ if __name__ == "__main__":
                     )
     formatted_response = format_response(extracted_info, 
                                          "model/documents/MR_Knee_CDEs_Formatted_Filled.json", 
-                                         "model/documents/Observation_Knee_PCL_Injury.json"
+                                         "model/documents/FHIR_Observation_Knee_MRI.json"
                         )
     
 
