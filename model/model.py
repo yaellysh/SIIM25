@@ -67,6 +67,23 @@ def extract_related(context_path, rad_reports, past_reports):
 
     gemini_call(system_prompt)
 
+def output_cleaning(output_cleaning):
+    lines = output_cleaning.splitlines()
+    if lines[0].startswith("```"):
+        lines = lines[1:]
+    if lines[-1].startswith("```"):
+        lines = lines[:-1]
+
+    # 3) Reassemble just the JSON block
+    json_text = "\n".join(lines)
+
+    # 4) Parse into a Python dict
+    data = json.loads(json_text)
+
+    # 5) Pretty-print with real indentation and line breaks
+    output = json.dumps(data, indent=4)
+    return output
+
 def format_response(exracted_info, cdes, model_obvs):
 
     with open(cdes, 'r') as file:
@@ -107,18 +124,4 @@ if __name__ == "__main__":
                         )
     
 
-    lines = formatted_response.splitlines()
-    if lines[0].startswith("```"):
-        lines = lines[1:]
-    if lines[-1].startswith("```"):
-        lines = lines[:-1]
-
-    # 3) Reassemble just the JSON block
-    json_text = "\n".join(lines)
-
-    # 4) Parse into a Python dict
-    data = json.loads(json_text)
-
-    # 5) Pretty-print with real indentation and line breaks
-    print(json.dumps(data, indent=4))
-    
+print(output_cleaning(formatted_response))
