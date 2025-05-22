@@ -1,0 +1,442 @@
+[
+  {
+    "id": "RDES2025",
+    "name": "MR Knee Joint",
+    "description": "Abnormal findings from evaluation of the knee joint on MRI.",
+    "schema_version": "1.0.0",
+    "set_version": {
+      "number": 1,
+      "date": "2025-04-22"
+    },
+    "status": {
+      "name": "Published",
+      "date": "2025-04-22"
+    },
+    "url": "https://api.rsna.org/radelement/public/sets/2025",
+    "index_codes": [],
+    "body_parts": [
+      {
+        "name": "Knee",
+        "index_codes": {
+          "system": "RADLEX",
+          "code": "RID2751",
+          "display": "Knee joint",
+          "url": "http://www.radlex.org/RID/RID2751"
+        }
+      }
+    ],
+    "contributors": {
+      "people": [
+        {
+          "name": "Po-Hao Chen",
+          "email": "cdesupport@rsna.org"
+        }
+      ],
+      "organizations": []
+    },
+    "history": [],
+    "specialties": [
+      "Musculoskeletal Radiology"
+    ],
+    "elements": [
+      {
+        "id": "RDE-96B300F9",
+        "parent_set": "RDES2025",
+        "name": "ACL Injury",
+        "definition": "Sprain or tear of the anterior cruciate ligament (ACL).",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-955A424C",
+        "parent_set": "RDES2025",
+        "name": "PCL Injury",
+        "definition": "Sprain or tear of the posterior cruciate ligament (PCL).",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-24FEC7EF",
+        "parent_set": "RDES2025",
+        "name": "MCL Injury",
+        "definition": "Sprain or tear of the medial collateral ligament (MCL).",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-BC7B6B00",
+        "parent_set": "RDES2025",
+        "name": "LCL Injury",
+        "definition": "Sprain or tear of the lateral collateral ligament (LCL).",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-BCCEAA8B",
+        "parent_set": "RDES2025",
+        "name": "MPFL Injury",
+        "definition": "Sprain or tear of the medial patellofemoral ligament (MPFL).",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-99C69ACD",
+        "parent_set": "RDES2025",
+        "name": "Lateral Menisuc Injury",
+        "definition": "Tear of the lateral meniscus.",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-D731C787",
+        "parent_set": "RDES2025",
+        "name": "Medial Menisuc Injury",
+        "definition": "Tear of the medial meniscus.",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-A89BBBC4",
+        "parent_set": "RDES2025",
+        "name": "Medial Meniscal Extrusion",
+        "definition": "Displacement of the meniscus, medially or laterally, outside the margins of the tibial plateau.",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-4DE215BB",
+        "parent_set": "RDES2025",
+        "name": "Effusion",
+        "definition": "Accumulation of fluid in the knee joint.",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-524CDB97",
+        "parent_set": "RDES2025",
+        "name": "Osteoarthiritis (generic)",
+        "definition": "General classification of the presence and severity of osteoarthritis in the anteroposterior knee joint.",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-C858DB74",
+        "parent_set": "RDES2025",
+        "name": "Medial Compartment Osteoarthritis",
+        "definition": "Classification of the presence and severity of osteoarthritis in the medial compartment of the knee joint.",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-16510D1B",
+        "parent_set": "RDES2025",
+        "name": "Lateral Compartment Osteoarthritis",
+        "definition": "Classification of the presence and severity of osteoarthritis in the lateral compartment of the knee joint.",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-F4ECB154",
+        "parent_set": "RDES2025",
+        "name": "PF Compartment Osteoarthritis",
+        "definition": "Classification of the presence and severity of osteoarthritis in the patellofemoral compartment of the knee joint.",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      },
+      {
+        "id": "RDE-0DEE27BC",
+        "parent_set": "RDES2025",
+        "name": "Baker (Popliteal Cyst)",
+        "definition": "A synovial cyst located in the back of the knee in the popliteal space arising from the semimembranous bursa or the knee joint. ",
+        "question": "",
+        "schema_version": "1.0.0",
+        "element_version": {
+          "number": 1,
+          "date": "2025-04-22"
+        },
+        "status": {
+          "name": "Published",
+          "date": "2025-04-22"
+        },
+        "index_codes": [],
+        "contributors": {
+          "people": [],
+          "organizations": []
+        },
+        "history": [],
+        "references": [],
+        "value_set": {
+          "min_cardinality": 1,
+          "max_cardinality": 1,
+          "values": []
+        }
+      }
+    ],
+    "references": [
+      {
+        "citation": " CDE URL ",
+        "url": "https://radelement.org/"
+      }
+    ]
+  }
+]
