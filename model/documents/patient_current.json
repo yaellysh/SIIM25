@@ -1,66 +1,512 @@
-{
-    "resourceType": "ServiceRequest",
-    "id": "srvreq-referral-ortho-20250522",
-    "status": "active",
-    "intent": "order",
-    "priority": "routine",
-  
+[
+  {
+    "resourceType": "Patient",
+    "id": "leo_daniels",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "name": [
+      {
+        "use": "official",
+        "text": "Leo Daniels"
+      }
+    ],
+    "gender": "male",
+    "birthDate": "1975-07-15"
+  },
+  {
+    "resourceType": "Condition",
+    "id": "leo_daniels-condition-current",
+    "subject": {
+      "reference": "Patient/leo_daniels"
+    },
+    "code": {
+      "text": "Knee pain"
+    },
+    "clinicalStatus": {
+      "text": "active"
+    },
+    "onsetDateTime": "2025-05-08"
+  },
+  {
+    "resourceType": "Observation",
+    "id": "leo_daniels-observation",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
     "category": [
       {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/service-category",
-            "code": "referral",
-            "display": "Referral"
-          }
-        ]
+        "text": "Radiology"
       }
     ],
-  
     "code": {
-      "coding": [
-        {
-          "system": "http://snomed.info/sct",
-          "code": "394607009",
-          "display": "Referral to orthopedic surgeon"
-        }
-      ],
-      "text": "Orthopedic surgery consultation"
+      "text": "MRI Knee Findings"
     },
-  
-    "subject": { "reference": "Patient/patient-leo" },
-  
-    "authoredOn": "2025-05-22",
-  
-    "requester": {
-      "reference": "Organization/providence-primary-care",
-      "display": "Providence Primary Care – Beaverton"
+    "subject": {
+      "reference": "Patient/leo_daniels"
     },
-  
-    "recipient": [
+    "effectiveDateTime": "2025-05-22",
+    "valueString": "See attached radiology report for detailed MRI findings."
+  },
+  {
+    "resourceType": "DiagnosticReport",
+    "id": "leo_daniels-report",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
       {
-        "reference": "Organization/providence-orthopedics",
-        "display": "Providence Orthopedics & Sports Medicine"
+        "text": "Radiology"
       }
     ],
-  
-    "reasonCode": [
+    "code": {
+      "text": "MRI Right Knee"
+    },
+    "subject": {
+      "reference": "Patient/leo_daniels"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "result": [
       {
-        "coding": [
-          {
-            "system": "http://snomed.info/sct",
-            "code": "84359006",
-            "display": "Pain in left knee"
-          }
-        ],
-        "text": "Left knee pain and intermittent instability"
+        "reference": "Observation/leo_daniels-observation"
       }
     ],
-  
-    "note": [
+    "conclusion": "MRI of the right knee shows findings consistent with radiology report text."
+  },
+  {
+    "resourceType": "Practitioner",
+    "id": "dr-1",
+    "name": [
       {
-        "text": "Patient requests specialty evaluation for ongoing left‑knee symptoms. No prior orthopedic records available in current EHR."
+        "text": "Dr. Reynolds"
+      }
+    ]
+  },
+  {
+    "resourceType": "Patient",
+    "id": "anna_thompson",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "name": [
+      {
+        "use": "official",
+        "text": "Anna Thompson"
+      }
+    ],
+    "gender": "female",
+    "birthDate": "1980-07-15"
+  },
+  {
+    "resourceType": "Condition",
+    "id": "anna_thompson-condition-current",
+    "subject": {
+      "reference": "Patient/anna_thompson"
+    },
+    "code": {
+      "text": "Knee pain"
+    },
+    "clinicalStatus": {
+      "text": "active"
+    },
+    "onsetDateTime": "2025-05-08"
+  },
+  {
+    "resourceType": "Observation",
+    "id": "anna_thompson-observation",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Knee Findings"
+    },
+    "subject": {
+      "reference": "Patient/anna_thompson"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "valueString": "See attached radiology report for detailed MRI findings."
+  },
+  {
+    "resourceType": "DiagnosticReport",
+    "id": "anna_thompson-report",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Right Knee"
+    },
+    "subject": {
+      "reference": "Patient/anna_thompson"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "result": [
+      {
+        "reference": "Observation/anna_thompson-observation"
+      }
+    ],
+    "conclusion": "MRI of the right knee shows findings consistent with radiology report text."
+  },
+  {
+    "resourceType": "Practitioner",
+    "id": "dr-2",
+    "name": [
+      {
+        "text": "Dr. Patel"
+      }
+    ]
+  },
+  {
+    "resourceType": "Patient",
+    "id": "marcus_lin",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "name": [
+      {
+        "use": "official",
+        "text": "Marcus Lin"
+      }
+    ],
+    "gender": "male",
+    "birthDate": "1985-07-15"
+  },
+  {
+    "resourceType": "Condition",
+    "id": "marcus_lin-condition-current",
+    "subject": {
+      "reference": "Patient/marcus_lin"
+    },
+    "code": {
+      "text": "Knee pain"
+    },
+    "clinicalStatus": {
+      "text": "active"
+    },
+    "onsetDateTime": "2025-05-08"
+  },
+  {
+    "resourceType": "Observation",
+    "id": "marcus_lin-observation",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Knee Findings"
+    },
+    "subject": {
+      "reference": "Patient/marcus_lin"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "valueString": "See attached radiology report for detailed MRI findings."
+  },
+  {
+    "resourceType": "DiagnosticReport",
+    "id": "marcus_lin-report",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Right Knee"
+    },
+    "subject": {
+      "reference": "Patient/marcus_lin"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "result": [
+      {
+        "reference": "Observation/marcus_lin-observation"
+      }
+    ],
+    "conclusion": "MRI of the right knee shows findings consistent with radiology report text."
+  },
+  {
+    "resourceType": "Practitioner",
+    "id": "dr-3",
+    "name": [
+      {
+        "text": "Dr. Ford"
+      }
+    ]
+  },
+  {
+    "resourceType": "Patient",
+    "id": "carmen_rodriguez",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "name": [
+      {
+        "use": "official",
+        "text": "Carmen Rodriguez"
+      }
+    ],
+    "gender": "female",
+    "birthDate": "1990-07-15"
+  },
+  {
+    "resourceType": "Condition",
+    "id": "carmen_rodriguez-condition-current",
+    "subject": {
+      "reference": "Patient/carmen_rodriguez"
+    },
+    "code": {
+      "text": "Knee pain"
+    },
+    "clinicalStatus": {
+      "text": "active"
+    },
+    "onsetDateTime": "2025-05-08"
+  },
+  {
+    "resourceType": "Observation",
+    "id": "carmen_rodriguez-observation",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Knee Findings"
+    },
+    "subject": {
+      "reference": "Patient/carmen_rodriguez"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "valueString": "See attached radiology report for detailed MRI findings."
+  },
+  {
+    "resourceType": "DiagnosticReport",
+    "id": "carmen_rodriguez-report",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Right Knee"
+    },
+    "subject": {
+      "reference": "Patient/carmen_rodriguez"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "result": [
+      {
+        "reference": "Observation/carmen_rodriguez-observation"
+      }
+    ],
+    "conclusion": "MRI of the right knee shows findings consistent with radiology report text."
+  },
+  {
+    "resourceType": "Practitioner",
+    "id": "dr-4",
+    "name": [
+      {
+        "text": "Dr. Benson"
+      }
+    ]
+  },
+  {
+    "resourceType": "Patient",
+    "id": "daniel_okafor",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "name": [
+      {
+        "use": "official",
+        "text": "Daniel Okafor"
+      }
+    ],
+    "gender": "male",
+    "birthDate": "1995-07-15"
+  },
+  {
+    "resourceType": "Condition",
+    "id": "daniel_okafor-condition-current",
+    "subject": {
+      "reference": "Patient/daniel_okafor"
+    },
+    "code": {
+      "text": "Knee pain"
+    },
+    "clinicalStatus": {
+      "text": "active"
+    },
+    "onsetDateTime": "2025-05-08"
+  },
+  {
+    "resourceType": "Observation",
+    "id": "daniel_okafor-observation",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Knee Findings"
+    },
+    "subject": {
+      "reference": "Patient/daniel_okafor"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "valueString": "See attached radiology report for detailed MRI findings."
+  },
+  {
+    "resourceType": "DiagnosticReport",
+    "id": "daniel_okafor-report",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Right Knee"
+    },
+    "subject": {
+      "reference": "Patient/daniel_okafor"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "result": [
+      {
+        "reference": "Observation/daniel_okafor-observation"
+      }
+    ],
+    "conclusion": "MRI of the right knee shows findings consistent with radiology report text."
+  },
+  {
+    "resourceType": "Practitioner",
+    "id": "dr-5",
+    "name": [
+      {
+        "text": "Dr. Simmons"
+      }
+    ]
+  },
+  {
+    "resourceType": "Patient",
+    "id": "tina_gallagher",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "name": [
+      {
+        "use": "official",
+        "text": "Tina Gallagher"
+      }
+    ],
+    "gender": "female",
+    "birthDate": "2000-07-15"
+  },
+  {
+    "resourceType": "Condition",
+    "id": "tina_gallagher-condition-current",
+    "subject": {
+      "reference": "Patient/tina_gallagher"
+    },
+    "code": {
+      "text": "Knee pain"
+    },
+    "clinicalStatus": {
+      "text": "active"
+    },
+    "onsetDateTime": "2025-05-08"
+  },
+  {
+    "resourceType": "Observation",
+    "id": "tina_gallagher-observation",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Knee Findings"
+    },
+    "subject": {
+      "reference": "Patient/tina_gallagher"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "valueString": "See attached radiology report for detailed MRI findings."
+  },
+  {
+    "resourceType": "DiagnosticReport",
+    "id": "tina_gallagher-report",
+    "meta": {
+      "lastUpdated": "2025-05-22"
+    },
+    "status": "final",
+    "category": [
+      {
+        "text": "Radiology"
+      }
+    ],
+    "code": {
+      "text": "MRI Right Knee"
+    },
+    "subject": {
+      "reference": "Patient/tina_gallagher"
+    },
+    "effectiveDateTime": "2025-05-22",
+    "result": [
+      {
+        "reference": "Observation/tina_gallagher-observation"
+      }
+    ],
+    "conclusion": "MRI of the right knee shows findings consistent with radiology report text."
+  },
+  {
+    "resourceType": "Practitioner",
+    "id": "dr-6",
+    "name": [
+      {
+        "text": "Dr. Lowe"
       }
     ]
   }
-  
+]
