@@ -1,0 +1,356 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-leo-background-history",
+  "type": "collection",
+  "timestamp": "2025-05-22T10:30:00-07:00",
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-leo",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-leo",
+        "identifier": [
+          { "system": "urn:oid:2.16.840.1.113883.19.5.99999.1", "value": "MRN12345" }
+        ],
+        "name": [ { "use": "official", "family": "Unknown", "given": ["Leo"] } ],
+        "gender": "male",
+        "birthDate": "1975-06-01",
+        "address": [ { "state": "OR", "country": "USA" } ]
+      }
+    },
+    {
+      "fullUrl": "Organization/ohsu",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ohsu",
+        "name": "Oregon Health & Science University",
+        "type": [
+          { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/organization-type", "code": "prov" } ] }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Practitioner/practitioner-smith",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner-smith",
+        "name": [ { "family": "Smith", "given": ["Emily"], "prefix": ["Dr."] } ],
+        "qualification": [
+          { "identifier": [ { "system": "http://hl7.org/fhir/sid/us-npi", "value": "1234567890" } ],
+            "code": { "text": "Internal Medicine" } }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Encounter/enc-annual-2025",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-annual-2025",
+        "status": "finished",
+        "class": { "code": "AMB", "display": "Ambulatory" },
+        "subject": { "reference": "Patient/patient-leo" },
+        "participant": [ { "individual": { "reference": "Practitioner/practitioner-smith" } } ],
+        "period": { "start": "2025-05-01T09:00:00-07:00", "end": "2025-05-01T09:30:00-07:00" },
+        "serviceProvider": { "reference": "Organization/ohsu" },
+        "reasonCode": [
+          { "text": "Annual wellness examination" }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Condition/cond-hypertension",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-hypertension",
+        "clinicalStatus": { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" } ] },
+        "verificationStatus": { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "confirmed" } ] },
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/condition-category", "code": "problem-list-item" } ] } ],
+        "code": { "coding": [ { "system": "http://snomed.info/sct", "code": "38341003", "display": "Hypertensive disorder, systemic arterial" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "onsetDateTime": "2018-11-12"
+      }
+    },
+    {
+      "fullUrl": "Condition/cond-hyperlipidemia",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-hyperlipidemia",
+        "clinicalStatus": { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" } ] },
+        "verificationStatus": { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "confirmed" } ] },
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/condition-category", "code": "problem-list-item" } ] } ],
+        "code": { "coding": [ { "system": "http://snomed.info/sct", "code": "55822004", "display": "Hyperlipidemia" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "onsetDateTime": "2016-08-20"
+      }
+    },
+    {
+      "fullUrl": "AllergyIntolerance/allergy-penicillin",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "allergy-penicillin",
+        "clinicalStatus": { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical", "code": "active" } ] },
+        "type": "allergy",
+        "code": { "coding": [ { "system": "http://snomed.info/sct", "code": "91936005", "display": "Allergy to penicillin" } ] },
+        "patient": { "reference": "Patient/patient-leo" },
+        "reaction": [ { "manifestation": [ { "text": "Rash" } ], "onset": "1985" } ]
+      }
+    },
+    {
+      "fullUrl": "AllergyIntolerance/allergy-pollen",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "allergy-pollen",
+        "clinicalStatus": { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical", "code": "active" } ] },
+        "type": "allergy",
+        "code": { "coding": [ { "system": "http://snomed.info/sct", "code": "418363000", "display": "Allergy to pollen" } ] },
+        "patient": { "reference": "Patient/patient-leo" }
+      }
+    },
+    {
+      "fullUrl": "MedicationStatement/medstat-lisinopril",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "medstat-lisinopril",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [ { "system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "29046", "display": "Lisinopril 10 MG Oral Tablet" } ],
+          "text": "Lisinopril 10 mg PO daily"
+        },
+        "subject": { "reference": "Patient/patient-leo" },
+        "effectivePeriod": { "start": "2018-11-20" },
+        "dosage": [ { "text": "10 mg orally once daily" } ]
+      }
+    },
+    {
+      "fullUrl": "MedicationStatement/medstat-atorvastatin",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "medstat-atorvastatin",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [ { "system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "83367", "display": "Atorvastatin 20 MG Oral Tablet" } ],
+          "text": "Atorvastatin 20 mg PO nightly"
+        },
+        "subject": { "reference": "Patient/patient-leo" },
+        "effectivePeriod": { "start": "2017-01-10" },
+        "dosage": [ { "text": "20 mg orally at bedtime" } ]
+      }
+    },
+    {
+      "fullUrl": "Immunization/imm-influenza-2024",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "imm-influenza-2024",
+        "status": "completed",
+        "vaccineCode": { "coding": [ { "system": "http://hl7.org/fhir/sid/cvx", "code": "207", "display": "Influenza, seasonal, quadrivalent" } ] },
+        "patient": { "reference": "Patient/patient-leo" },
+        "occurrenceDateTime": "2024-10-05",
+        "primarySource": true
+      }
+    },
+    {
+      "fullUrl": "Immunization/imm-covid-2024",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "imm-covid-2024",
+        "status": "completed",
+        "vaccineCode": { "coding": [ { "system": "http://hl7.org/fhir/sid/cvx", "code": "229", "display": "COVID‑19 mRNA vaccine, bivalent booster" } ] },
+        "patient": { "reference": "Patient/patient-leo" },
+        "occurrenceDateTime": "2024-09-20",
+        "primarySource": true
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-bp-20250501",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bp-20250501",
+        "status": "final",
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "vital-signs" } ] } ],
+        "code": { "coding": [ { "system": "http://loinc.org", "code": "85354-9", "display": "Blood pressure panel" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "encounter": { "reference": "Encounter/enc-annual-2025" },
+        "effectiveDateTime": "2025-05-01T09:05:00-07:00",
+        "component": [
+          {
+            "code": { "coding": [ { "system": "http://loinc.org", "code": "8480-6", "display": "Systolic BP" } ] },
+            "valueQuantity": { "value": 128, "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]" }
+          },
+          {
+            "code": { "coding": [ { "system": "http://loinc.org", "code": "8462-4", "display": "Diastolic BP" } ] },
+            "valueQuantity": { "value": 82, "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]" }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-bmi-20250501",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bmi-20250501",
+        "status": "final",
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "vital-signs" } ] } ],
+        "code": { "coding": [ { "system": "http://loinc.org", "code": "39156-5", "display": "Body mass index (BMI)" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "encounter": { "reference": "Encounter/enc-annual-2025" },
+        "effectiveDateTime": "2025-05-01T09:05:00-07:00",
+        "valueQuantity": { "value": 27.8, "unit": "kg/m²", "system": "http://unitsofmeasure.org", "code": "kg/m2" }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-ldl-20241221",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-ldl-20241221",
+        "status": "final",
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" } ] } ],
+        "code": { "coding": [ { "system": "http://loinc.org", "code": "13457-7", "display": "Cholesterol in LDL [Mass/volume] in Serum" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "effectiveDateTime": "2024-12-21",
+        "valueQuantity": { "value": 88, "unit": "mg/dL", "system": "http://unitsofmeasure.org", "code": "mg/dL" }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-hba1c-20241221",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-hba1c-20241221",
+        "status": "final",
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" } ] } ],
+        "code": { "coding": [ { "system": "http://loinc.org", "code": "4548-4", "display": "Hemoglobin A1c/Hemoglobin.total in Blood" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "effectiveDateTime": "2024-12-21",
+        "valueQuantity": { "value": 5.4, "unit": "%", "system": "http://unitsofmeasure.org", "code": "%" }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-creatinine-20241221",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-creatinine-20241221",
+        "status": "final",
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" } ] } ],
+        "code": { "coding": [ { "system": "http://loinc.org", "code": "2160-0", "display": "Creatinine [Mass/volume] in Serum or Plasma" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "effectiveDateTime": "2024-12-21",
+        "valueQuantity": { "value": 0.9, "unit": "mg/dL", "system": "http://unitsofmeasure.org", "code": "mg/dL" }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-smoking-status",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-smoking-status",
+        "status": "final",
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "social-history" } ] } ],
+        "code": { "coding": [ { "system": "http://loinc.org", "code": "72166-2", "display": "Tobacco smoking status" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "effectiveDateTime": "2025-05-01",
+        "valueCodeableConcept": { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor", "code": "N", "display": "Never smoker" } ] }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-alcohol-intake",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-alcohol-intake",
+        "status": "final",
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "social-history" } ] } ],
+        "code": { "coding": [ { "system": "http://loinc.org", "code": "74013-4", "display": "Alcoholic drinks per week" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "effectiveDateTime": "2025-05-01",
+        "valueQuantity": { "value": 4, "unit": "drinks/week", "system": "http://unitsofmeasure.org", "code": "{drinks}/wk" }
+      }
+    },
+    {
+      "fullUrl": "Procedure/proc-colonoscopy-2023",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-colonoscopy-2023",
+        "status": "completed",
+        "code": { "coding": [ { "system": "http://snomed.info/sct", "code": "73761001", "display": "Colonoscopy" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "performedDateTime": "2023-04-12",
+        "asserter": { "reference": "Practitioner/practitioner-smith" },
+        "bodySite": [ { "coding": [ { "system": "http://snomed.info/sct", "code": "71854001", "display": "Large intestine" } ] } ]
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/dr-cmp-20241221",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "dr-cmp-20241221",
+        "status": "final",
+        "category": [ { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/v2-0074", "code": "LAB" } ] } ],
+        "code": { "coding": [ { "system": "http://loinc.org", "code": "24323-8", "display": "Basic or comprehensive metabolic panel" } ] },
+        "subject": { "reference": "Patient/patient-leo" },
+        "effectiveDateTime": "2024-12-21",
+        "issued": "2024-12-22",
+        "performer": [ { "reference": "Organization/ohsu" } ],
+        "result": [
+          { "reference": "Observation/obs-creatinine-20241221" }  /* …add other CMP analytes if desired */
+        ]
+      }
+    },
+    {
+      "fullUrl": "FamilyMemberHistory/famhist-father-mi",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "famhist-father-mi",
+        "status": "completed",
+        "patient": { "reference": "Patient/patient-leo" },
+        "relationship": { "coding": [ { "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode", "code": "FTH", "display": "Father" } ] },
+        "condition": [
+          {
+            "code": { "coding": [ { "system": "http://snomed.info/sct", "code": "22298006", "display": "Myocardial infarction" } ] },
+            "onsetAge": { "value": 65, "unit": "years" }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "CarePlan/careplan-htn",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "careplan-htn",
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          { "coding": [ { "system": "http://snomed.info/sct", "code": "734163000", "display": "Hypertension care plan" } ] }
+        ],
+        "subject": { "reference": "Patient/patient-leo" },
+        "author": [ { "reference": "Practitioner/practitioner-smith" } ],
+        "addresses": [ { "reference": "Condition/cond-hypertension" } ],
+        "goal": [ { "reference": "Goal/goal-bp" } ],
+        "activity": [
+          { "detail": { "kind": "ServiceRequest", "status": "scheduled", "code": { "text": "Lifestyle counseling and medication adherence review" } } }
+        ],
+        "period": { "start": "2025-05-01" }
+      }
+    },
+
+    {
+      "fullUrl": "Goal/goal-bp",
+      "resource": {
+        "resourceType": "Goal",
+        "id": "goal-bp",
+        "lifecycleStatus": "active",
+        "description": { "text": "Maintain blood pressure below 130/80 mmHg" },
+        "subject": { "reference": "Patient/patient-leo" },
+        "startDate": "2025-05-01",
+        "addresses": [ { "reference": "Condition/cond-hypertension" } ],
+        "target": [
+          {
+            "measure": { "coding": [ { "system": "http://loinc.org", "code": "85354-9", "display": "Blood pressure panel" } ] },
+            "detailRange": {
+              "low":  { "value": 90,   "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]" },
+              "high": { "value": 130,  "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]" }
+            },
+            "dueDate": "2026-05-01"
+          }
+        ]
+      }
+    }
+
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "resourceType": "Observation",
+  "id": "observation-knee-pcl-injury-001",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
+        }
+      ],
+      "text": "Imaging"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "81902-2",
+        "display": "MRI Knee finding"
+      }
+    ],
+    "text": "PCL Injury"
+  },
+  "subject": {
+    "reference": "Patient/example-patient-001"
+  },
+  "encounter": {
+    "reference": "Encounter/example-encounter-001"
+  },
+  "effectiveDateTime": "2025-04-22T10:00:00-05:00",
+  "issued": "2025-04-22T10:30:00-05:00",
+  "performer": [
+    {
+      "reference": "Practitioner/example-radiologist"
+    }
+  ],
+  "bodySite": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "36701003",
+        "display": "Knee joint structure"
+      }
+    ],
+    "text": "Right knee"
+  },
+  "method": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "113091000",
+        "display": "Magnetic resonance imaging"
+      }
+    ],
+    "text": "MRI"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://example.org/fhir/pcl-injury-scale",
+        "code": "2",
+        "display": "Grade 2"
+      }
+    ],
+    "text": "Partial Tear (Grade 2)"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "A",
+          "display": "Abnormal"
+        }
+      ],
+      "text": "Abnormal finding"
+    }
+  ],
+  "note": [
+    {
+      "text": "Partial tear of the posterior cruciate ligament observed on sagittal proton density images."
+    }
+  ]
+}

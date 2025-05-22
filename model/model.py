@@ -1,0 +1,104 @@
+import requests
+import json
+from dotenv import load_dotenv
+import os
+import re
+
+load_dotenv()
+
+api_key = os.getenv("API_KEY")
+FHIR_SERVER_URL = "https://your.fhir.server"
+MODEL_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent"
+
+def load_clinical_note(filepath):
+    with open(filepath, 'r') as file:
+        return file.read()
+
+def gemini_call(system_prompt):
+    data = {
+        "contents": [
+            {
+                "role": "user",
+                "parts": [{"text": system_prompt}]
+            }
+        ]
+    }
+
+    headers = {"Content-Type": "application/json"}
+    response = requests.post(f"{MODEL_URL}?key={api_key}", headers=headers, json=data)
+    response_json = response.json()
+
+    # print(json.dumps(response_json, indent=4))
+
+    return response_json
+
+def read_file_content(filepath):
+    with open(filepath, 'r') as file:
+        return file.read()
+
+def extract_related(context_path, rad_reports, past_reports):
+    with open(context_path, 'r') as file:
+        context_content = file.read()
+
+    with open(rad_reports, 'r') as file:
+        rad_reports_content = file.read()
+
+    with open(past_reports, 'r') as file:
+        past_reports_content = file.read()
+
+    system_prompt = '''
+        You are a medical professional assigned the task of reviewing previous patient reports and extracting relevant information. 
+        You will be provided with a context, either a file or a string, and you need to extract the related information from the provided text.
+        Relevent information is anything you think a medical professional would need to know about the patient.
+    '''
+
+    ground_rules = '''Ground rules: 
+        - We want the output to be a list of information from past and radiology reports that are relevant to the current patient context. \n
+    '''
+
+    context_prompt = f"Here is the current patient context:\n{context_content}\n\n"
+    rad_reports_prompt = f"Here are the radiology reports:\n{rad_reports_content}\n\n"
+    past_reports_prompt = f"Here are the past history and FHIR resources:\n{past_reports_content}\n\n"
+
+    system_prompt += ground_rules + context_prompt + rad_reports_prompt + past_reports_prompt
+
+    gemini_call(system_prompt)
+
+def format_response(exracted_info, cdes, model_obvs):
+
+    with open(cdes, 'r') as file:
+        cdes_content = file.read()
+
+    with open(model_obvs, 'r') as file:
+        model_obvs_content = file.read()
+
+    print("Common Data Elements (CDEs):")
+    print(json.dumps(json.loads(cdes_content), indent=4))
+    print("\nModel Observations:")
+    print(json.dumps(json.loads(model_obvs_content), indent=4))
+
+    system_prompt = '''
+        You are a medical professional assigned the task of formatting the extracted information from previous patient reports based 
+        off structure of a model report. As well as this, you will be provided with a list of Common Data Elements (CDEs) and model 
+        observations. Wherever relevent, please use these to format the extracted information.
+    '''
+
+    ground_rules = '''Ground rules: 
+        - The output should be a FHIR observation resource in JSON format. \n
+    '''
+
+    extracted_info_prompt = f"Here is the extracted information:\n{extracted_info}\n\n"
+    cdes_prompt = f"Here are the Common Data Elements (CDEs):\n{cdes_content}\n\n"
+    model_obvs_prompt = f"Here are the model observations:\n{model_obvs_content}\n\n"
+
+    system_prompt += ground_rules + extracted_info_prompt + cdes_prompt + model_obvs_prompt
+
+    return gemini_call(system_prompt)
+
+
+if __name__ == "__main__":
+    extracted_info = extract_related("documents/patient_current.json", "documents/rad_reports.txt", "documents/patient_history.json")
+    formatted_response = format_response(extracted_info, "documents/MR_Knee_CDEs_Formatted.json", "documents/Observation_Knee_PCL_Injury.json")
+    print(json.dumps(formatted_response, indent=4))
+ 
+    

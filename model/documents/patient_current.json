@@ -1,0 +1,66 @@
+{
+    "resourceType": "ServiceRequest",
+    "id": "srvreq-referral-ortho-20250522",
+    "status": "active",
+    "intent": "order",
+    "priority": "routine",
+  
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/service-category",
+            "code": "referral",
+            "display": "Referral"
+          }
+        ]
+      }
+    ],
+  
+    "code": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "394607009",
+          "display": "Referral to orthopedic surgeon"
+        }
+      ],
+      "text": "Orthopedic surgery consultation"
+    },
+  
+    "subject": { "reference": "Patient/patient-leo" },
+  
+    "authoredOn": "2025-05-22",
+  
+    "requester": {
+      "reference": "Organization/providence-primary-care",
+      "display": "Providence Primary Care – Beaverton"
+    },
+  
+    "recipient": [
+      {
+        "reference": "Organization/providence-orthopedics",
+        "display": "Providence Orthopedics & Sports Medicine"
+      }
+    ],
+  
+    "reasonCode": [
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "84359006",
+            "display": "Pain in left knee"
+          }
+        ],
+        "text": "Left knee pain and intermittent instability"
+      }
+    ],
+  
+    "note": [
+      {
+        "text": "Patient requests specialty evaluation for ongoing left‑knee symptoms. No prior orthopedic records available in current EHR."
+      }
+    ]
+  }
+  
