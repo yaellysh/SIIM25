@@ -5,3 +5,5 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 .pnpm-debug.log*
+.DS_Store
+.next

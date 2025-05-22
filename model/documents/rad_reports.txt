@@ -1,31 +1,73 @@
-﻿Examination: MRI at right knee. 
-Clinical indication: right knee pain. 
-Comparison: none. 
-Technique: long TR axial sagittal coronal images of the right knee. 
-Findings: menisci lateral and medial menisci are intact.  
-Ligaments torn ACL ligament.
-Posterior cruciate ligament intact. 
-Medial model collateral ligaments intact.
-Posterolateral corner structures intact. 
-Extensor mechanism: Distal quadriceps of the patellar tendons are intact. 
-Patella normally positioned within the femoral groove. 
-No retinacular disruption. 
-Fluid: no joint fluid or baker's cyst.  
-Osis and articular structures: 
-Bones: No contusion. 
-Media compartment no cartilage disruption. 
-Patellofemoral compartment: no cartilage interruption. 
-lateral compartment: no lateral cartilage disruption. 
-Impression: acute ACL disruption.
+﻿RADIOLOGY REPORT
+Patient: Leo Daniels  DOB: 07/15/1974  Age: 50 y
+Study: MRI RIGHT KNEE (WITHOUT IV CONTRAST)
+Study Date: 05/22/2025
+Accession #: —not available—  Ordering Physician: Amanda Reynolds, MD
 
+CLINICAL INDICATION
+Acute right‑knee pain after non‑contact soccer activity; prior anterior cruciate ligament (ACL) reconstruction suspected but operative records unavailable. Rule out internal derangement.
 
+TECHNIQUE
+Multiplanar, multisequence MRI of the right knee obtained on a 3 T system without intravenous contrast. Standard proton‑density, T2‑weighted fat‑saturated, and gradient‑echo sequences performed in sagittal, coronal, and axial planes.
 
+FINDINGS
+BONES / CARTILAGE
 
-Examination: MRI right knee. 
-Comparison: examination performed six months ago on 12/11/2024. 
-Clinical information: previously repaired ACL tear with recurrent pain.
-Technique: long TR axial sagittal coronal images of the right knee were performed.
-Findings: menisci: Median lateral meniscus are intact. 
-Ligaments: Anterior Cruciate ligament: postsurgical changes from anterior cruciate ligament repair. There's minimal abnormal signal within the ligament, presumably related to postsurgical change. The ligament remains intact.
-Posterior cruciate ligament: intact.
-Medial lateral collateral ligament: intact. Posterior lateral corner structures colon intact extensor mechanism, a quadceps of pateller tendons are intact period. Patella normally positioned within the Patohemeral groove period of retinacular disruption period. Joint food, colon, small reactive, joint effusion, period no baker says ose and articulate structures, no evident abormality period. paragraph.  Previous ACL repair remains intact period, abnormal signal within the repair, up, presumably related to post surgical change period. 2. period. Small reactive right, knee joint diffusion, likely related to surgery period.
+No acute fracture or marrow contusion.
+
+Mild chondral thinning with small marginal osteophytes in the medial femorotibial compartment (Kellgren‑Lawrence grade 2).
+
+Articular cartilage otherwise preserved; trochlear facet shows moderate chondrosis.
+
+MENISCI
+
+Medial meniscus: Complex tear involving posterior horn and body. Extrusion of the body measuring approximately 4 mm beyond the medial tibial plateau.
+
+Lateral meniscus: Normal morphology and signal; no tear.
+
+LIGAMENTS
+
+ACL: Prior graft is torn—marked fiber discontinuity and fraying (complete failure).
+
+PCL: Intact, normal thickness and signal.
+
+MCL: Thickened with intraligamentous edema near femoral attachment, consistent with grade II sprain (partial tear).
+
+LCL: Intact with normal low signal.
+
+MPFL: Partial fiber disruption adjacent to patellar insertion—compatible with partial tear.
+
+TENDONS / EXTENSOR MECHANISM
+Quadriceps and patellar tendons intact.
+Semimembranosus, semitendinosus, and biceps femoris tendons without abnormality.
+
+JOINT FLUID / SOFT TISSUES
+Moderate joint effusion distending the suprapatellar recess.
+Baker (popliteal) cyst present, measuring 2.3 × 1.1 cm, thin‑walled, no signs of rupture.
+No loose bodies or soft‑tissue mass.
+
+Neurovascular structures grossly unremarkable.
+
+IMPRESSION
+Complete tear of prior ACL graft.
+
+Complex medial meniscal tear with 4 mm medial meniscal extrusion.
+
+Partial MCL sprain and partial MPFL tear; PCL and LCL intact.
+
+Moderate joint effusion.
+
+Mild medial‑compartment and moderate patellofemoral osteoarthritis; lateral compartment spared.
+
+Small Baker cyst without evidence of rupture.
+
+RECOMMENDATIONS
+Orthopedic consultation for possible ACL revision and meniscal repair.
+
+Consider ultrasound‑guided aspiration or corticosteroid injection if effusion symptomatic.
+
+Begin quadriceps‑strengthening physical therapy once clinically appropriate.
+
+Electronically signed:
+Elizabeth Carter, MD – Musculoskeletal Radiology
+05/22/2025  14:56 PDT
