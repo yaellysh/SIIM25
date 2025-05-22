@@ -1,0 +1,60 @@
+{
+  "resourceType": "Observation",
+  "id": "example1KneeFinding",
+  "code": {
+    "coding": [
+      {
+        "system": "https://radelement.org",
+        "code": "RDES2025",
+        "display": "MR Knee Joint"
+      }
+    ]
+  },
+  "status": "preliminary",
+  "subject": {
+    "reference": "Patient/example1Knee"
+  },
+  "derivedFrom": [
+    {
+      "reference": "ImagingStudy/example1KneeMRI"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "RDE-96B300F9",
+            "display": "ACL Injury"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "RDE-96B300F9.1",
+            "display": "Partial Tear"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "RDE-955A424C",
+            "display": "PCL Injury"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "RDE-955A424C.2",
+            "display": "Complete Tear"
+          }
+        ]
+      }
+    }
+  ]
+}
