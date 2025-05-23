@@ -1,0 +1,14 @@
+{
+    "resourceType": "Observation",
+    "code": {
+        "coding": [
+            {
+                "system": "https://radelement.org",
+                "code": "RDES2025",
+                "display": "MR Knee Joint"
+            }
+        ]
+    },
+    "status": "preliminary",
+    "component": []
+}

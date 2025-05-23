@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Geist, Geist_Mono } from 'next/font/google'
+import Link from 'next/link'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -204,8 +205,19 @@ export default function Home() {
 
 function Navbar() {
   return (
-    <nav className="w-full bg-gray-800 text-white p-4 flex justify-end items-center">
-      <div className="text-md font-bold">Mission: Extraction</div>
+    <nav className="w-full bg-gray-800 text-white p-4 flex justify-between items-center">
+      <div className="text-lg font-bold">Mission: Extraction</div>
+      <div className="flex space-x-4 text-sm">
+        <Link href="#" className="hover:underline">
+          Home
+        </Link>
+        <Link href="#" className="hover:underline">
+          About
+        </Link>
+        <Link href="#" className="hover:underline">
+          Contact
+        </Link>
+      </div>
     </nav>
   )
 }

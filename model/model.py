@@ -128,3 +128,5 @@ if __name__ == "__main__":
     
 
 print(output_cleaning(formatted_response))
+with open("model/documents/formatted_response.json", "w") as output_file:
+    output_file.write(output_cleaning(formatted_response))
