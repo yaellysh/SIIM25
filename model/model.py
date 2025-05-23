@@ -28,11 +28,10 @@ def gemini_call(system_prompt):
     response = requests.post(f"{MODEL_URL}?key={api_key}", headers=headers, json=data)
     response_json = response.json()
 
-    # print(json.dumps(response_json, indent=4))
-
     output_text = "".join(p["text"] for p in response_json["candidates"][0]["content"]["parts"])
 
     return output_text
+
 def read_file_content(filepath):
     with open(filepath, 'r') as file:
         return file.read()
@@ -41,11 +40,15 @@ def extract_related(context_path, rad_reports, past_reports):
     with open(context_path, 'r') as file:
         context_content = file.read()
 
-    with open(rad_reports, 'r') as file:
-        rad_reports_content = file.read()
+    rad_reports_content = ""
+    for idx, filename in enumerate(rad_reports, start=1):
+        with open(filename, 'r') as file:
+            rad_reports_content += f"Report {idx}:\n" + file.read() + "\n"
 
-    with open(past_reports, 'r') as file:
-        past_reports_content = file.read()
+    past_reports_content = ""
+    for idx, filename in enumerate(past_reports, start=1):
+        with open(filename, 'r') as file:
+            past_reports_content += f"Report {idx}:\n" + file.read() + "\n"
 
     system_prompt = '''
         You are a medical professional assigned the task of reviewing previous patient reports and extracting information relevant to the context
@@ -84,7 +87,7 @@ def output_cleaning(output_cleaning):
     output = json.dumps(data, indent=4)
     return output
 
-def format_response(exracted_info, cdes, model_obvs):
+def format_response(extracted_info, cdes, model_obvs):
 
     with open(cdes, 'r') as file:
         cdes_content = file.read()
@@ -115,8 +118,8 @@ def format_response(exracted_info, cdes, model_obvs):
 
 if __name__ == "__main__":
     extracted_info = extract_related("model/documents/patient_current.json", 
-                                     "model/documents/rad_reports.txt", 
-                                     "model/documents/patient_history.json"
+                                     ["model/documents/rad_reports.txt"], 
+                                     ["model/documents/patient_history.json"]
                     )
     formatted_response = format_response(extracted_info, 
                                          "model/documents/MR_Knee_CDEs_Formatted_Filled.json", 
